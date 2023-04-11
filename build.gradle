@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.3.12.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+sourceCompatibility = JavaVersion.VERSION_11
+
+repositories {
+    maven { url 'https://maven.aliyun.com/repository/public/' }
+}
+
+
+dependencies {
+    implementation('org.springframework.boot:spring-boot-starter-jdbc')
+    implementation(fileTree(dir: "./libs", include: "*.jar"))
+}
